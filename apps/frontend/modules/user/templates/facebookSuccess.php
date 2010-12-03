@@ -1,0 +1,1 @@
+Ľutujeme, pri prihlasovaní nastala chyba!

@@ -1,0 +1,52 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+signin:
+  url: /signin
+  param: { module: user, action: signin }
+
+signout:
+  url: /signout
+  param: { module: user, action: signout }
+
+register:
+  url: /register
+  param: { module: user, action: register }
+
+password:
+  url: /reset_password
+  param: { module: user, action: resetPassword, wildcard: true }
+
+activation:
+  url: /activate/:code
+  param: { module: user, action: activate }
+
+facebook:
+  url: /facebook
+  param: { module: user, action: facebook }
+  
+google:
+  url: /google
+  param: { module: user, action: google }
+  
+settings:
+  url: /settings
+  param: { module: user, action: settings }
+
+yourItems:
+  url:   /yours
+  param: { module: items, action: yours }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: items, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

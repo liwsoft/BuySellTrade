@@ -1,0 +1,15 @@
+User:
+  actAs: [Timestampable]
+  columns:
+    username: { type: string(128), notnull: true, unique: true }
+    email: { type: string(128), notnull: true, unique: true }
+    salt: string(128)
+    password: string(128)
+    name: string(255)
+    is_active: { type: boolean, default: false }
+    is_super_admin: { type: boolean, default: false }
+    last_login: { type: timestamp }
+  indexes:
+    name_idx:
+      fields: [username]
+      unique: true
